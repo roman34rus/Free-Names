@@ -1,0 +1,89 @@
+﻿<Window x:Class="FreeNames.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FreeNames"
+        mc:Ignorable="d"
+        Title="Поиск свободных имен и адресов" SizeToContent="WidthAndHeight" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="20"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="20"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+           
+            <Label    Grid.Row="0" Content="Шаблон имени" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBox  Grid.Row="1" x:Name="tbNameTemplate" TextWrapping="NoWrap" VerticalAlignment="Top" HorizontalAlignment="Left" Height="23" Width="120"/>
+            <Label    Grid.Row="2" Content="Параметры счетчика" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Label   Grid.Column="0" Content="От" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBox Grid.Column="1" x:Name="tbCounterFrom" TextWrapping="NoWrap" VerticalAlignment="Top" HorizontalAlignment="Left" Height="23" Width="35"/>
+                <Label   Grid.Column="2" Content="До" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBox Grid.Column="3" x:Name="tbСounterTo" TextWrapping="NoWrap" VerticalAlignment="Top" HorizontalAlignment="Left" Height="23" Width="35"/>
+                <Label   Grid.Column="4" Content="Длина" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBox Grid.Column="5" x:Name="tbCounterLength" TextWrapping="NoWrap" VerticalAlignment="Top" HorizontalAlignment="Left" Height="23" Width="35"/>
+            </Grid>
+
+            <Label    Grid.Row="4" Content="Домен" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBox  Grid.Row="5" x:Name="tbDomain" TextWrapping="NoWrap" VerticalAlignment="Top" HorizontalAlignment="Left" Height="23" Width="200"/>
+            <Button   Grid.Row="6" x:Name="btNamesSearch" Content="Поиск имен" Margin="0, 10, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btNamesSearch_Click" Width="Auto" Padding="10, 0, 10, 0"/>
+            <Label    Grid.Row="7" Content="Подсети" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBox  Grid.Row="8" x:Name="tbSubnets" TextWrapping="NoWrap" AcceptsReturn="True" VerticalAlignment="Top" HorizontalAlignment="Left" Height="100" Width="200"/>
+            <Button   Grid.Row="9" x:Name="btAddressesSearch" Content="Поиск адресов" Margin="0, 10, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btAddressesSearch_Click" Width="Auto" Padding="10, 0, 10, 0"/>
+        </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Content="Свободные имена" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <ListBox Grid.Row="1" x:Name="lbFreeNames" Width="200" Height="350"/>
+        </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Content="Свободные адреса" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <ListBox Grid.Row="1" x:Name="lbFreeAddresses" Width="200" Height="350"></ListBox>
+        </Grid>
+
+        <Label Grid.Row="1" Grid.Column="4" Content="v1.0 Любимов Роман, 2017" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

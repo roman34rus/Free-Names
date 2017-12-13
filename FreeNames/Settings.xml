@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Settings>
+  <NameTemplate>sr-dc-[C]</NameTemplate>
+  <CounterFrom>1</CounterFrom>
+  <CounterTo>300</CounterTo>
+  <CounterLength>3</CounterLength>
+  <Domain>corp.gidroogk.com</Domain>
+  <Subnet>10.101.101</Subnet>
+  <Subnet>10.101.102</Subnet>
+  <Subnet>10.101.103</Subnet>
+  <Subnet>10.101.104</Subnet>
+</Settings>
